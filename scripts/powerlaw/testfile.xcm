@@ -1,0 +1,5 @@
+statistic chi
+cd ../data
+data 1:1 WNA_IRAS_total.pha
+cd ../powerlaw
+
