@@ -63,7 +63,7 @@ Enhancement of the variability from absorption lines, where the ionization of th
 
 #### Parameters:
  - `logxi`: Mean log ionisation of the UFO gas.
- - `nH`: Column density of the UFO gas in units of 10^24/cm^2
+ - `nH`: Column density of the UFO gas in units of $10^{24}$/cm^2
  - `cor`: Correlation between the UFO ionisation and the powerlaw flux
 
 
@@ -86,7 +86,7 @@ Damping of the variability produced by ~constant photoionised emission lines, as
 Variability from partial covering absorption independent of the continuum. Varies in covering fraction, with an optional parameter allowing for a correlation between covering fraction and column density.
 
 #### Parameters:
- - `nh`: column density of the absorber in 10^24/cm^2
+ - `nh`: column density of the absorber in $10^{24}$/cm^2
  - `fcov`: mean covering fraction (note that with large var at the limits of 0 and 1 this will not be the true mean, as the distribution will be truncated at 0 and 1)
  - `var`: variance of the covering fraction
  - `nh_cor`: correlation between the column density and the covering fraction
