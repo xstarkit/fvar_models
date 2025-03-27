@@ -99,3 +99,7 @@ Damping from neutral reflection. This mainly produces a negative feature at 6.4 
 
 #### Parameters:
  - `frac`: The fraction of the average 0.3-10 keV flux attributable to distant reflection (assuming the only other component is a powerlaw)
+
+### Original Link
+
+https://web.archive.org/web/20250116024332/https://www.michaelparker.space/variance-models
