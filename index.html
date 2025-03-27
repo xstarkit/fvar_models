@@ -45,7 +45,7 @@ input {
 
 <p>The models can be divided into two classes: additive models, which account for the primary processes driving the observed variability (such as variable absorption or changes in the coronal powerlaw emission), and multiplicative models, which modify the additive variability to account for secondary effects, such as damping from less variable emission processes (for example, distant reflection).</p>
 
-<p>Models are calculated with the Monte-Carlo method described in Parker et al 2020. These models are simple, cover a limited parameter space, and rely on basic assumptions of variability. Use at your own risk! We strongly suggest reading the guidelines below, in full, before use.</p>
+<p>Models are calculated with the Monte-Carlo method described in <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.1363P/abstract">Parker et al. 2020</a>. These models are simple, cover a limited parameter space, and rely on basic assumptions of variability. Use at your own risk! We strongly suggest reading the guidelines below, in full, before use.</p>
 
 <h3>General guidelines:</h3>
 
@@ -69,7 +69,7 @@ input {
 
 <h3>Variance Spectra in XSPEC:</h3>
 
-<p>These models all require a pre-calculated variance spectrum to be loaded into XSPEC. The procedure for this is fairly simple, once you have a variance spectrum (see e.g. Vaughan et al., 2003, for an explanation of how to calculate one). Once you have a variance spectrum, the simplest way to load it into XSPEC is using the flx2xsp/ftflx2xsp tool, which converts a text file into an XSPEC compatible .pha file and a unit diagonal response matrix.</p>
+<p>These models all require a pre-calculated variance spectrum to be loaded into XSPEC. The procedure for this is fairly simple, once you have a variance spectrum (see e.g. <a href="https://ui.adsabs.harvard.edu/abs/2003MNRAS.345.1271V/abstract">Vaughan et al., 2003</a>, for an explanation of how to calculate one). Once you have a variance spectrum, the simplest way to load it into XSPEC is using the <a href="https://heasarc.gsfc.nasa.gov/lheasoft/ftools/headas/ftflx2xsp.html">flx2xsp/ftflx2xsp tool</a>, which converts a text file into an XSPEC compatible .pha file and a unit diagonal response matrix.</p>
 
 <p>Note that in general standard response matrices are not appropriate for variance spectra, as the variance is not equivalent to counts and will not redistribute in the same way. In most cases an energy-dependent Gaussian smoothing (using the gsmooth model in XSPEC) will give a good approximation of the energy resolution of the detector, and most other effects are normalised out when calculating an Fvar spectrum.</p>
 
@@ -82,7 +82,7 @@ input {
 
 <img src="images/Powerlaw-variability.webp" alt="Powerlaw variability" align="right">
 
-<p>The Fvar_pow.fits table model (Parker et al., 2020). This model approximates the variance of a powerlaw continuum varying in log(flux), with a correlation between the photon index of the powerlaw and the log(flux).</p>
+<p>The Fvar_pow.fits table model (<a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.1363P/abstract">Parker et al., 2020</a>). This model approximates the variance of a powerlaw continuum varying in log(flux), with a correlation between the photon index of the powerlaw and the log(flux).</p>
 
 <p>Note that there is a bug in the current version of this model, where the parameter labelled var refers to standard deviation instead of variance. This will be fixed in a future update.</p>
 
@@ -107,7 +107,7 @@ input {
 
 <img src="images/Black-body-damping.webp" alt="Black body damping" align="right">
 
-<p>The Fvar_bbdamp.fits table model (Parker et al., 2020). This model accounts for the reduction in observed variance caused by a constant black body component.</p>
+<p>The Fvar_bbdamp.fits table model (<a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.1363P/abstract">Parker et al., 2020</a>). This model accounts for the reduction in observed variance caused by a constant black body component.</p>
 
 <p>This was conceived as a phenomenological model for the soft excess in AGN, but should be valid for other purposes.</p>
 ​
@@ -132,9 +132,9 @@ input {
 
 <img src="images/Distant-reflection.webp" alt="Distant reflection" align="right">
 
-<p>The Fvar_xildamp.fits table model (Parker et al., 2020). This model accounts for the reduction in observed variance caused by a constant unblurred reflection component.</p>
+<p>The Fvar_xildamp.fits table model (<a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.1363P/abstract">Parker et al., 2020</a>). This model accounts for the reduction in observed variance caused by a constant unblurred reflection component.</p>
 
-<p>This model is based on the Xillver reflection model (Garcia et al., 2013). The ionization is fixed at log(xi)=1, the photon index at 2, and the iron abundance at solar.</p>
+<p>This model is based on the Xillver reflection model (<a href="https://ui.adsabs.harvard.edu/abs/2013ApJ...768..146G/abstract">Garcia et al., 2013</a>). The ionization is fixed at log(xi)=1, the photon index at 2, and the iron abundance at solar.</p>
 ​
 <h3>Parameters:</h3>
 
@@ -155,9 +155,9 @@ input {
 
 <img src="images/Relativistic-reflection.webp" alt="Relativistic reflection" align="right">
 
-<p>The Fvar_refdamp.fits table model (Parker et al., 2020, Zaidouni et al., in prep). This model accounts for the reduction in observed variance caused by a relativistic reflection component.</p>
+<p>The Fvar_refdamp.fits table model (<a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.1363P/abstract">Parker et al., 2020</a>, Zaidouni et al., in prep). This model accounts for the reduction in observed variance caused by a relativistic reflection component.</p>
 
-<p>This model is based on the Relxill relativistic reflection model (Garcia et al., 2014). In this version, most parameters are fixed at the representative literature values for IRAS 13224-3809. A more general version will be released soon.</p>
+<p>This model is based on the Relxill relativistic reflection model (<a href="https://ui.adsabs.harvard.edu/abs/2014ApJ...782...76G/abstract">Garcia et al., 2014</a>). In this version, most parameters are fixed at the representative literature values for IRAS 13224-3809. A more general version will be released soon.</p>
 ​
 <h3>Parameters:</h3>
 
@@ -181,11 +181,11 @@ input {
 
 <img src="images/Ultra-fast-outflow.webp" alt="Ultra-fast outflow" align="right">
 
-<p>The Fvar_ufo.fits table model (Parker et al., 2020, Härer et al., 2021). This model accounts for the enhancement in observed variance caused by a highly ionised absorption that responds to the X-ray flux.</p>
+<p>The Fvar_ufo.fits table model (<a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.1363P/abstract">Parker et al., 2020</a>, Härer et al., 2021). This model accounts for the enhancement in observed variance caused by a highly ionised absorption that responds to the X-ray flux.</p>
 
-<p>The basic model was implemented in Parker et al., 2020, then expanded to allow for velocity broadening in Härer et al., 2021.</p>
+<p>The basic model was implemented in <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.1363P/abstract">Parker et al., 2020</a>, then expanded to allow for velocity broadening in <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.4506H/abstract">Härer et al., 2021</a>.</p>
 
-<p>This model is based on the Xabs ionised absorption model (Steenbrugge et al., 2003).</p>
+<p>This model is based on the Xabs ionised absorption model (<a href="https://ui.adsabs.harvard.edu/abs/2003A%26A...402..477S/abstract">Steenbrugge et al., 2003</a>).</p>
 ​
 <h3>Parameters:</h3>
 
@@ -211,7 +211,7 @@ input {
 
 <p>The Fvar_pidamp_1.fits table model (Parker et al., submitted). This model accounts for the drop in variance caused by constant photoionised emission.</p>
 
-<p>This model is based on the Spex photoionisation model Pion (Miller et al., 2015, Mehdipour et al., 2016).</p>
+<p>This model is based on the Spex photoionisation model Pion (<a href="https://ui.adsabs.harvard.edu/abs/2015Natur.526..542M/abstract">Miller et al., 2015</a>, <a href="https://ui.adsabs.harvard.edu/abs/2016A%26A...596A..65M/abstract">Mehdipour et al., 2016</a>).</p>
 ​
 <h3>Parameters:</h3>
 
@@ -233,9 +233,9 @@ input {
 
 <img src="images/Partial-covering-absorption.webp" alt="Partial-covering absorption" align="right">
 
-<p>The Fvar_pcov_1.1.fits table model (Parker et al., 2021). This model describes the variance caused by a photoionised absorber changing in covering fraction around a mean value.</p>
+<p>The Fvar_pcov_1.1.fits table model (<a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.508.1798P/abstract">Parker et al., 2021</a>). This model describes the variance caused by a photoionised absorber changing in covering fraction around a mean value.</p>
 
-<p>This model is based on the Spex photoionisation model Xabs (Steenbrugge et al., 2003).</p>
+<p>This model is based on the Spex photoionisation model Xabs (<a href="https://ui.adsabs.harvard.edu/abs/2003A%26A...402..477S/abstract">Steenbrugge et al., 2003</a>).</p>
 ​
 <h3>Parameters:</h3>
 
